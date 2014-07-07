@@ -1,0 +1,6 @@
+- name: Install RVM
+  sudo: false
+  shell: '\curl -sSL https://get.rvm.io | bash -s stable --ruby'
+- name: Set autorun RVM
+  sudo: false
+  raw: echo "[[ -s \"$HOME/.rvm/scripts/rvm\" ]] && . \"$HOME/.rvm/scripts/rvm\"" >> .bashrc

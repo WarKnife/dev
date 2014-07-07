@@ -1,0 +1,12 @@
+- name: Get source
+  sudo: false
+  shell: 'mkdir -p $HOME/bin/'
+  shell: 'wget -P $HOME/bin/ https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein'
+
+- name: Change script to executable
+  sudo: false
+  shell: 'chmod a+x $HOME/bin/lein'
+
+- name: Get dependencies
+  sudo:false
+  shell: 'lein'
