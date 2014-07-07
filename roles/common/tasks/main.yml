@@ -1,3 +1,4 @@
-#- include: rvm.yml
-#- include: erlang.yml
+- include: rvm.yml
+- include: erlang.yml
 - include: clojure.yml
+- include: exercism.yml
