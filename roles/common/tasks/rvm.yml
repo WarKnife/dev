@@ -1,3 +1,4 @@
+---
 - name: Install RVM
   sudo: false
   shell: '\curl -sSL https://get.rvm.io | bash -s stable --ruby'

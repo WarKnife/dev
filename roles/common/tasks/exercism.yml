@@ -1,2 +1,3 @@
+---
 - name: Download and install cli of exercism
   shell: 'curl -s http://cli.exercism.io/install | sh'
