@@ -1,7 +1,0 @@
----
- - name: Update apt
-   sudo: true
-   apt: update_cache=yes
- - name: Install erlang packets
-   sudo: true
-   apt: name=erlang state=present force=yes

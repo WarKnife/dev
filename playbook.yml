@@ -1,4 +1,27 @@
+---
 - hosts: all
   user: vagrant
-  roles:
-   - common 
+
+  tasks:
+      #    - name: Install RVM
+      #      shell: curl -sSL https://get.rvm.io | bash -s stable --ruby creates=~/.rvm
+      #    
+      #    - name: Update apt
+      #      sudo: true
+      #      apt: update_cache=yes
+      #    
+      #    - name: Install erlang packets
+      #      sudo: true
+      #      apt: name=erlang state=present force=yes
+      #    
+      #    - name: create $HOME/bin folder
+      #      file: path=~/bin state=directory
+      #    
+      #    - name: Get source
+      #      get_url: url=https://raw.githubusercontent.com/technomancy/leiningen/stable/bin/lein dest=~/bin mode=0711
+    
+    - name: Get dependencies
+      shell: bin/lein self-install
+    
+    - name: Download and install cli of exercism
+      shell: 'curl -s http://cli.exercism.io/install | sh'

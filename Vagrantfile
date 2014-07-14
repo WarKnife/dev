@@ -26,7 +26,6 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
   # using a specific IP.
   config.vm.network :private_network, ip: "193.168.0.25", adapter: 2
   config.vm.provision 'ansible' do |ansible|
-      ansible.sudo = true
       ansible.playbook = "playbook.yml"
   end
 
